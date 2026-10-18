@@ -23,10 +23,10 @@ Marque com `[x]` o que for concluído. A documentação técnica está no [READM
 - [ ] **Prazos de entrega:** confirmar ou trocar os prazos de exemplo (Site estilizado: até 15 dias úteis; Site + Marketing: até 25 dias úteis). Ficam em `lib/dados.ts`.
 - [ ] **Assinatura de e-mail:** montar uma assinatura com o logo, o site e o Instagram para colar no Gmail.
 - [ ] **Demonstrações dos 4 modelos:** criar as cópias com nomes fictícios e ligar o botão "Ver demonstração" (`demoUrl` em `lib/dados.ts`).
-  - [ ] Ofício Barbearia (base: projeto da barbearia, já em Next.js)
+  - [x] Ofício Barbearia: no ar em https://barbearia.tecprotecnologias.com.br (repositório `oficio-barbearia`, pasta `demo-oficio-barbearia`).
   - [ ] Maison Itinerante (base: Casa do Chef)
   - [ ] Prato Nobre (base: Só Chef)
-  - [ ] Hub de Estudos (base: hub de estudos, mesmo nome do site original)
+  - [ ] Hub de Estudos: código já no repositório `Hub-de-Estudos`; falta publicar no Cloudflare (estudos.tecprotecnologias.com.br) e cadastrar o endereço novo no Supabase.
 - [ ] **Fotos de tela reais** dos modelos no lugar das miniaturas desenhadas em código, quando as demonstrações existirem.
 - [ ] **Área administrativa (`/admin`):** login só da TecPro (Supabase) para cadastrar, sem mexer no código:
   - modelos (nome, segmento, descrição, o que inclui, link da demonstração, foto);

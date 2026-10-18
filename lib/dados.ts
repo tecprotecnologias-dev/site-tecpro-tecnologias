@@ -71,7 +71,7 @@ export const modelos: Modelo[] = [
       "Botão de agendamento pelo WhatsApp",
     ],
     personalizacao: ["Logo e cores da marca", "Fotos do espaço e da equipe", "Serviços e valores", "Domínio próprio"],
-    demoUrl: "",
+    demoUrl: "https://barbearia.tecprotecnologias.com.br",
     paleta: { fundo: "#141210", texto: "#efe6d6", acento: "#b8925a", suave: "#2a2420" },
   },
   {
