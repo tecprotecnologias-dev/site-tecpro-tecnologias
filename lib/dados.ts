@@ -132,12 +132,12 @@ export const modelos: Modelo[] = [
   },
 ];
 
-// Valores em reais, usados pelo simulador. Todos são EXEMPLO por enquanto.
+// Valores em reais, usados pelo simulador (definidos com base na pesquisa de mercado de 2026-10-18).
 
 export type Pacote = {
   id: string;
   nome: string;
-  valor: number; // pagamento único // EXEMPLO
+  valor: number; // pagamento único
   prazo: string; // EXEMPLO
   resumo: string;
   itens: string[];
@@ -148,7 +148,7 @@ export const pacotes: Pacote[] = [
   {
     id: "site",
     nome: "Site estilizado",
-    valor: 350,
+    valor: 790,
     prazo: "até 15 dias úteis", // EXEMPLO
     resumo: "O modelo escolhido, vestido com a identidade da sua marca.",
     itens: [
@@ -163,7 +163,7 @@ export const pacotes: Pacote[] = [
   {
     id: "site-marketing",
     nome: "Site + Marketing",
-    valor: 2490, // EXEMPLO
+    valor: 1890,
     prazo: "até 25 dias úteis", // EXEMPLO
     resumo: "O site pronto para atrair, cadastrar e vender.",
     itens: [
@@ -212,28 +212,28 @@ export const ferramentas: Ferramenta[] = [
     nome: "Marketing por e-mail",
     descricao: "Newsletters, promoções e mensagens de aniversário enviadas para a base de clientes do seu site.",
     plataformas: "Brevo, RD Station",
-    mensal: 120, // EXEMPLO
+    mensal: 290,
   },
   {
     id: "sms",
     nome: "Marketing por SMS",
     descricao: "Lembretes de horário, confirmações e campanhas curtas que chegam até quem não abre e-mail.",
-    plataformas: "Zenvia, Twilio",
-    mensal: 90, // EXEMPLO
+    plataformas: "Zenvia, Twilio. Envios pagos à parte",
+    mensal: 190,
   },
   {
     id: "seo",
     nome: "Marketing por SEO",
     descricao: "Estrutura, textos e dados preparados para o seu site aparecer quando o cliente pesquisa no Google.",
     plataformas: "Google Search Console, Google Meu Negócio",
-    mensal: 190, // EXEMPLO
+    mensal: 390,
   },
   {
     id: "automacao",
     nome: "Marketing por automação",
     descricao: "Fluxos no WhatsApp e no e-mail que respondem, lembram e vendem enquanto você atende.",
-    plataformas: "API oficial do WhatsApp, Z-API, Take Blip",
-    mensal: 250, // EXEMPLO
+    plataformas: "API oficial do WhatsApp. Taxas da Meta à parte",
+    mensal: 490,
   },
 ];
 

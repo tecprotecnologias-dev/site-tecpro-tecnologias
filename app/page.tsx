@@ -192,7 +192,7 @@ export default function Inicio() {
                   </div>
                 ))}
               <p className="nota">
-                Domínio e e-mail profissional são pagos direto ao fornecedor. A hospedagem na Cloudflare começa sem custo.
+                Sem mensalidade obrigatória: a hospedagem na Cloudflare começa sem custo. Domínio, e-mail profissional e custos de envio das ferramentas (SMS e mensagens do WhatsApp) são pagos direto ao fornecedor.
               </p>
             </div>
           </div>
