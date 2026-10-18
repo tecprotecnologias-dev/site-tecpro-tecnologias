@@ -41,7 +41,11 @@ export function Rodape() {
                   Instagram @{empresa.instagram}
                 </a>
               </li>
-              <li>{empresa.cidade}</li>
+              <li>
+                <a href={empresa.facebook} target="_blank" rel="noopener">
+                  Facebook
+                </a>
+              </li>
             </ul>
           </div>
         </div>

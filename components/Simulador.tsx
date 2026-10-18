@@ -197,7 +197,7 @@ export function Simulador({ modeloInicial = modelos[0].slug }: { modeloInicial?:
                 type="tel"
                 inputMode="tel"
                 autoComplete="tel"
-                placeholder="(24) 99999-9999"
+                placeholder="(21) 99999-9999"
                 maxLength={20}
               />
             </label>

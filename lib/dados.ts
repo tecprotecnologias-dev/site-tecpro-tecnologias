@@ -4,11 +4,11 @@
 export const empresa = {
   nome: "TecPro Tecnologias",
   slogan: "Sites sob medida para marcas exigentes",
-  whatsapp: "5524999999999", // EXEMPLO: só números, com 55 e DDD
-  whatsappTexto: "(24) 99999-9999", // EXEMPLO
+  whatsapp: "5521983003074", // só números, com 55 e DDD
+  whatsappTexto: "(21) 98300-3074",
   email: "tecprotecnologias@gmail.com", // trocar por contato@tecprotecnologias.com.br quando existir
-  instagram: "tecprotecnologias", // EXEMPLO
-  cidade: "Volta Redonda, RJ",
+  instagram: "tecpro_tecnologias",
+  facebook: "https://www.facebook.com/profile.php?id=61575373685541",
   url: "https://tecprotecnologias.com.br", // domínio em registro no Registro.br
 };
 

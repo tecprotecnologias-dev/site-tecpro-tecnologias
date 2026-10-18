@@ -5,8 +5,9 @@
   --linha-forte: rgba(243, 238, 228, 0.28);
   --marfim: #f3eee4;
   --cinza: #a39d93;
-  --laranja: #e8692c;
-  --laranja-claro: #f39a6b;
+  --acento: #34b8e4;
+  --acento-claro: #6fd3ee;
+  --azul: #2f6be0;
   --serif: var(--fonte-serif), "Times New Roman", serif;
   --sans: var(--fonte-sans), system-ui, sans-serif;
   --largura: 1240px;
@@ -53,7 +54,7 @@ textarea {
 }
 
 ::selection {
-  background: var(--laranja);
+  background: var(--acento);
   color: var(--preto);
 }
 
@@ -79,7 +80,7 @@ textarea {
   content: "";
   width: 28px;
   height: 1px;
-  background: var(--laranja);
+  background: var(--acento);
 }
 
 .titulo {
@@ -93,7 +94,7 @@ textarea {
 .titulo em,
 .titulo-hero em {
   font-style: italic;
-  color: var(--laranja-claro);
+  color: var(--acento-claro);
 }
 
 .texto-grande {
@@ -121,8 +122,8 @@ textarea {
 }
 
 .botao:hover {
-  background: var(--laranja);
-  border-color: var(--laranja);
+  background: var(--acento);
+  border-color: var(--acento);
   transform: translateY(-2px);
 }
 
@@ -178,20 +179,22 @@ textarea {
   line-height: 1;
 }
 
-.marca-nome strong {
-  font-size: 19px;
-  font-weight: 700;
-  letter-spacing: -0.01em;
+.marca-emblema {
+  width: 46px;
+  height: 46px;
 }
 
-.marca-nome strong span {
-  color: var(--laranja);
+.marca-nome strong {
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
 }
 
 .marca-nome small {
-  font-size: 9px;
-  letter-spacing: 0.34em;
-  color: var(--cinza);
+  font-size: 8.5px;
+  font-weight: 600;
+  letter-spacing: 0.36em;
+  color: var(--acento);
   margin-top: 5px;
 }
 
@@ -250,7 +253,7 @@ textarea {
   height: 900px;
   right: -280px;
   top: -200px;
-  background: radial-gradient(circle, rgba(232, 105, 44, 0.22), transparent 62%);
+  background: radial-gradient(circle, rgba(47, 107, 224, 0.28), transparent 62%);
   filter: blur(20px);
   animation: respirar 9s ease-in-out infinite;
 }
@@ -516,7 +519,7 @@ textarea {
   font-size: 11px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--laranja-claro);
+  color: var(--acento-claro);
 }
 
 .seta-circulo {
@@ -531,8 +534,8 @@ textarea {
 }
 
 .cartao-modelo:hover .seta-circulo {
-  background: var(--laranja);
-  border-color: var(--laranja);
+  background: var(--acento);
+  border-color: var(--acento);
 }
 
 .sob-medida {
@@ -695,7 +698,7 @@ textarea {
   font-size: 64px;
   line-height: 1;
   color: transparent;
-  -webkit-text-stroke: 1px var(--laranja);
+  -webkit-text-stroke: 1px var(--acento);
 }
 
 .etapa h3 {
@@ -721,7 +724,7 @@ textarea {
 }
 
 .secao-clara .titulo em {
-  color: var(--laranja);
+  color: var(--azul);
 }
 
 .pacotes {
@@ -800,7 +803,7 @@ textarea {
   width: 14px;
   height: 2px;
   margin-top: 11px;
-  background: var(--laranja);
+  background: var(--acento);
 }
 
 .ajustes {
@@ -835,7 +838,7 @@ textarea {
 
 .ajustes-exemplos li::before {
   content: "+ ";
-  color: var(--laranja);
+  color: var(--acento);
 }
 
 .tabela-ajustes {
@@ -908,7 +911,7 @@ textarea {
 .ferramenta-numero {
   font-size: 12px;
   letter-spacing: 0.2em;
-  color: var(--laranja-claro);
+  color: var(--acento-claro);
 }
 
 .ferramenta h3 {
@@ -988,7 +991,7 @@ textarea {
 }
 
 .cliente:hover {
-  border-color: var(--laranja);
+  border-color: var(--acento);
 }
 
 .cliente h3 {
@@ -1075,7 +1078,7 @@ textarea {
   display: block;
   font-style: normal;
   font-size: 14px;
-  color: var(--laranja-claro);
+  color: var(--acento-claro);
   margin-top: 10px;
 }
 
@@ -1084,12 +1087,12 @@ textarea {
 }
 
 .opcao input:checked + .opcao-caixa {
-  border-color: var(--laranja);
-  background: rgba(232, 105, 44, 0.08);
+  border-color: var(--acento);
+  background: rgba(52, 184, 228, 0.08);
 }
 
 .opcao input:focus-visible + .opcao-caixa {
-  outline: 2px solid var(--laranja);
+  outline: 2px solid var(--acento);
   outline-offset: 2px;
 }
 
@@ -1132,7 +1135,7 @@ textarea {
 .campo select:focus,
 .campo textarea:focus {
   outline: none;
-  border-color: var(--laranja);
+  border-color: var(--acento);
 }
 
 .consentimento {
@@ -1147,7 +1150,7 @@ textarea {
 
 .consentimento input {
   margin-top: 3px;
-  accent-color: var(--laranja);
+  accent-color: var(--acento);
   width: 16px;
   height: 16px;
   flex-shrink: 0;
@@ -1237,7 +1240,7 @@ textarea {
   width: 1000px;
   height: 1000px;
   transform: translateX(-50%);
-  background: radial-gradient(circle, rgba(232, 105, 44, 0.25), transparent 60%);
+  background: radial-gradient(circle, rgba(52, 184, 228, 0.22), transparent 60%);
 }
 
 .cta-final .titulo {
@@ -1361,7 +1364,7 @@ textarea {
 .lista-numerada li::before {
   content: counter(item, decimal-leading-zero);
   font-size: 12px;
-  color: var(--laranja-claro);
+  color: var(--acento-claro);
   padding-top: 4px;
 }
 
@@ -1531,4 +1534,23 @@ textarea {
   .rodape-base {
     flex-direction: column;
   }
+}
+
+/* Destaques na seção clara usam o azul do logo, que contrasta com o creme */
+.secao-clara .etiqueta,
+.secao-clara .ajustes-exemplos li::before {
+  color: var(--azul);
+}
+
+.secao-clara .rotulo::before,
+.secao-clara .pacote li::before {
+  background: var(--azul);
+}
+
+.secao-clara .pacote.escuro .etiqueta {
+  color: var(--acento);
+}
+
+.secao-clara .pacote.escuro li::before {
+  background: var(--acento);
 }
