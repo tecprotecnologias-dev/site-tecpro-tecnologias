@@ -148,7 +148,7 @@ export const pacotes: Pacote[] = [
   {
     id: "site",
     nome: "Site estilizado",
-    valor: 1490, // EXEMPLO
+    valor: 350,
     prazo: "até 15 dias úteis", // EXEMPLO
     resumo: "O modelo escolhido, vestido com a identidade da sua marca.",
     itens: [
