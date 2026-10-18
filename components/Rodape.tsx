@@ -1,4 +1,4 @@
-import { empresa, linkWhatsApp, modelos } from "@/lib/dados";
+import { empresa, modelos } from "@/lib/dados";
 import { Marca } from "./Marca";
 
 export function Rodape() {
@@ -28,9 +28,7 @@ export function Rodape() {
             <h4>Contato</h4>
             <ul>
               <li>
-                <a href={linkWhatsApp("Olá, TecPro! Quero saber mais sobre os sites.")} target="_blank" rel="noopener">
-                  WhatsApp {empresa.whatsappTexto}
-                </a>
+                <a href="/#simulador">Fazer um pedido</a>
               </li>
               <li>
                 <a href={`mailto:${empresa.email}`}>{empresa.email}</a>

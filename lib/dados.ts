@@ -5,7 +5,7 @@ export const empresa = {
   nome: "TecPro Tecnologias",
   slogan: "Sites sob medida para marcas exigentes",
   whatsapp: "5521983003074", // só números, com 55 e DDD
-  whatsappTexto: "(21) 98300-3074",
+  whatsappTexto: "(21) 98300-3074", // não exibir no site: o número só aparece ao enviar um pedido
   email: "contato@tecprotecnologias.com.br", // repassado ao Gmail pelo Cloudflare Email Routing
   instagram: "tecpro_tecnologias",
   facebook: "https://www.facebook.com/profile.php?id=61575373685541",
