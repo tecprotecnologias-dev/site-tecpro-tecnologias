@@ -30,7 +30,9 @@ Carregadas por `next/font/google` em `app/layout.tsx` e expostas como `--fonte-s
 |---|---|
 | `public/marca/logo-tecpro-original.jpg` | Logo completo enviado pela TecPro (350 px, fundo azul-marinho) |
 | `public/marca/tecpro-emblema.png` | Só o globo, recortado com fundo transparente, usado no cabeçalho e no rodapé |
-| `app/icon.png` | Ícone da aba: globo sobre o azul-marinho do logo |
+| `app/icon.png` | Ícone da aba (192 px): "T" branco num anel azul e ciano, com dois pontos violeta, sobre o azul-marinho. Simplificado do globo, que virava borrão em 16 px |
+| `app/apple-icon.png` | O mesmo ícone em 180 px, sem transparência, para a tela inicial do iPhone |
+| `public/marca/favicon.png` | Cópia do ícone em 256 px, para usar fora do site |
 
 O nome "TECPRO / TECNOLOGIAS" ao lado do emblema é texto (`components/Marca.tsx`), não imagem. Se chegar uma versão do logo em alta resolução ou SVG, troque o emblema por ela.
 

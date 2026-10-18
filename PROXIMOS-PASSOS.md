@@ -14,7 +14,6 @@ Marque com `[x]` o que for concluído. A documentação técnica está no [READM
 ## No site (junto com o Claude)
 
 - [ ] **Prazos de entrega:** confirmar ou trocar os prazos de exemplo (Site estilizado: até 15 dias úteis; Site + Marketing: até 25 dias úteis). Ficam em `lib/dados.ts`.
-- [ ] **Ficha da empresa para o Google:** dados estruturados (JSON-LD `Organization`) com nome, logo, site, e-mail e links do Instagram e do Facebook, para o Google não confundir a TecPro com outras empresas de nome parecido.
 - [ ] **Assinatura de e-mail:** montar uma assinatura com o logo, o site e o Instagram para colar no Gmail.
 - [ ] **Demonstrações dos 4 modelos:** criar as cópias com nomes fictícios e ligar o botão "Ver demonstração" (`demoUrl` em `lib/dados.ts`).
   - [ ] Ofício Barbearia (base: projeto da barbearia, já em Next.js)
@@ -49,6 +48,7 @@ Marque com `[x]` o que for concluído. A documentação técnica está no [READM
 - [x] Logo novo, cores da marca, contatos reais e preços definidos com pesquisa de mercado.
 - [x] Página Portfólio e menu corrigido.
 - [x] Telefone fora do site: o WhatsApp só aparece ao enviar um pedido.
+- [x] Ficha da empresa para o Google (JSON-LD) e ícone da aba novo, legível em tamanho pequeno.
 - [x] Google Search Console: domínio verificado pelo Cloudflare e sitemap processado com 6 páginas (18/10/2026).
 
 ## Lembretes

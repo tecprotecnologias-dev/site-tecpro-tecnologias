@@ -42,13 +42,14 @@ Basta enviar para a branch `main` do GitHub. O Cloudflare detecta o envio, roda 
 
 ```
 app/
-  layout.tsx            estrutura comum: fontes, cabeçalho, rodapé, metadados de SEO
+  layout.tsx            estrutura comum: fontes, cabeçalho, rodapé, metadados de SEO e ficha da empresa (JSON-LD)
   page.tsx              página inicial (hero, galeria, etapas, valores, marketing, simulador)
   portfolio/page.tsx    página Portfólio (modelos e sites entregues)
   modelos/[slug]/       página de cada modelo, gerada a partir de lib/dados.ts
   sitemap.ts, robots.ts SEO
   globals.css           todo o visual do site
   icon.png              ícone da aba do navegador
+  apple-icon.png        ícone ao salvar o site na tela do iPhone
 components/             partes reutilizáveis (cabeçalho, galeria, simulador...)
 lib/
   dados.ts              TODO o conteúdo: textos, modelos, preços, contatos

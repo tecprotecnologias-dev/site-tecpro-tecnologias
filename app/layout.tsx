@@ -24,10 +24,36 @@ export const metadata: Metadata = {
   },
 };
 
+// Ficha da empresa para o Google (JSON-LD). Sem telefone nem endereço, como no resto do site.
+const fichaEmpresa = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${empresa.url}/#empresa`,
+      name: empresa.nome,
+      url: `${empresa.url}/`,
+      logo: `${empresa.url}/marca/logo-tecpro-original.jpg`,
+      email: empresa.email,
+      description: "Criação de sites sob medida a partir de modelos personalizados com a identidade de cada marca.",
+      sameAs: [`https://www.instagram.com/${empresa.instagram}/`, empresa.facebook],
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${empresa.url}/#site`,
+      name: empresa.nome,
+      url: `${empresa.url}/`,
+      inLanguage: "pt-BR",
+      publisher: { "@id": `${empresa.url}/#empresa` },
+    },
+  ],
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-BR" className={`${serif.variable} ${sans.variable}`}>
       <body>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(fichaEmpresa) }} />
         <Cabecalho />
         <main>{children}</main>
         <Rodape />

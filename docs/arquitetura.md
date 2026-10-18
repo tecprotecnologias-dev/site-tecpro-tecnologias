@@ -28,6 +28,8 @@ Visitante ──> Cloudflare (tecprotecnologias.com.br) ──> arquivos de out/
 | `/sitemap.xml` | `app/sitemap.ts` | Gerado no build (`dynamic = "force-static"`) |
 | `/robots.txt` | `app/robots.ts` | Gerado no build |
 
+Toda página leva a **ficha da empresa** para o Google (JSON-LD `Organization` e `WebSite`, em `app/layout.tsx`): nome, logo, site, e-mail e os links do Instagram e do Facebook (`sameAs`). Ela ajuda o Google a separar a TecPro de outras empresas com nome parecido. Telefone e endereço ficam de fora de propósito. Os dados vêm de `empresa` em `lib/dados.ts`.
+
 `trailingSlash: true` faz todas as rotas terminarem com `/`, o que combina com a hospedagem estática.
 
 ## Seções da página inicial (com âncoras)
