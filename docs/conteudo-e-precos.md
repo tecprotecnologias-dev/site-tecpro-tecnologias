@@ -19,7 +19,7 @@ Não existe campo de cidade: o site não deve mostrar a cidade.
 
 ## Tipos de site (`segmentos`)
 
-Os 15 tipos aparecem como filtro da galeria. Para incluir um tipo, adicione `{ id, nome, descricao }`. Se nenhum modelo tiver aquele `id` em `segmentos`, a galeria mostra o cartão "Seu site de ..., criado do zero".
+Os 19 tipos aparecem como filtro da galeria. Para incluir um tipo, adicione `{ id, nome, descricao }`. Se nenhum modelo tiver aquele `id` em `segmentos`, a galeria mostra o cartão "Seu site de ..., criado do zero".
 
 ## Modelos (`modelos`)
 

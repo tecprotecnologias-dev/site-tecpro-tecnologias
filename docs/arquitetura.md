@@ -37,7 +37,7 @@ Toda página leva a **ficha da empresa** para o Google (JSON-LD `Organization` e
 | Âncora | Seção |
 |---|---|
 | (topo) | Hero com miniaturas dos modelos |
-| `#modelos` | Galeria com filtro dos 15 tipos de site |
+| `#modelos` | Galeria com filtro dos 19 tipos de site |
 | `#como-funciona` | 4 etapas |
 | `#valores` | Pacotes (pagamento único) e plano mensal de ajustes |
 | `#marketing` | 4 ferramentas de marketing |

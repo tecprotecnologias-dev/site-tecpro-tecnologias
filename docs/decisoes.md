@@ -26,3 +26,4 @@ Decisões tomadas no projeto, com o motivo. A mais recente fica no fim. Ao tomar
 | 2026-10-18 | Ícone da aba simplificado ("T" no anel) em vez do globo inteiro | O globo virava borrão em 16 px |
 | 2026-10-18 | Ficha da empresa (JSON-LD) sem telefone e sem endereço | Ajudar o Google a separar a TecPro de outras "TecPro", mantendo a regra de não mostrar telefone e cidade |
 | 2026-10-18 | Foto de perfil das redes com o globo do site (o "T" não é usado nas redes) | A TecPro quer o logo igual no site e nas redes |
+| 2026-10-18 | Novos tipos de site: Confeitaria, Casa de festas, Pousadas e Hotéis (19 no total); o modelo do buffet também aparece em Casa de festas | Pedido da TecPro para atender esses segmentos |
