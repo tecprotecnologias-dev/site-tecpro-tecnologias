@@ -21,6 +21,13 @@ export function Revelar() {
       { threshold: 0, rootMargin: "0px 0px -6% 0px" },
     );
 
+    // O que já está na tela fica visível na hora, sem animação.
+    document.querySelectorAll("[data-revelar]:not(.visivel)").forEach((a) => {
+      const caixa = a.getBoundingClientRect();
+      if (caixa.top < window.innerHeight && caixa.bottom > 0) a.classList.add("visivel");
+    });
+    document.documentElement.classList.add("revelar-pronto");
+
     const observarPendentes = () => {
       document.querySelectorAll("[data-revelar]:not(.visivel)").forEach((a) => observador.observe(a));
     };

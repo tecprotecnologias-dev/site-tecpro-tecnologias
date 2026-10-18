@@ -1374,13 +1374,15 @@ textarea {
 }
 
 /* Revelar ao rolar */
-[data-revelar] {
+/* Só esconde depois que o script está pronto: sem JavaScript (ou com
+   internet lenta) o conteúdo aparece normalmente. */
+.revelar-pronto [data-revelar] {
   opacity: 0;
   transform: translateY(40px);
-  transition: opacity 1s var(--curva), transform 1s var(--curva);
+  transition: opacity 0.9s var(--curva), transform 0.9s var(--curva);
 }
 
-[data-revelar].visivel {
+.revelar-pronto [data-revelar].visivel {
   opacity: 1;
   transform: none;
 }
@@ -1393,7 +1395,7 @@ textarea {
     transition: none !important;
   }
 
-  [data-revelar] {
+  .revelar-pronto [data-revelar] {
     opacity: 1;
     transform: none;
   }
