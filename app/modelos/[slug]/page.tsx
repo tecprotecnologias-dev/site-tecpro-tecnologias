@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Previa } from "@/components/Previa";
 import { Simulador } from "@/components/Simulador";
@@ -30,9 +29,9 @@ export default async function PaginaModelo({ params }: Props) {
     <>
       <section className="modelo-hero">
         <div className="container">
-          <Link href="/#modelos" className="voltar">
+          <a href="/#modelos" className="voltar">
             Voltar para a galeria
-          </Link>
+          </a>
           <div className="modelo-hero-grade">
             <div>
               <span className="rotulo">Modelo {modelo.segmento}</span>
@@ -50,9 +49,9 @@ export default async function PaginaModelo({ params }: Props) {
                     Demonstração em breve
                   </span>
                 )}
-                <Link href="#contratar" className="botao botao-contorno">
+                <a href="#contratar" className="botao botao-contorno">
                   Quero este modelo
-                </Link>
+                </a>
               </div>
             </div>
           </div>

@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Marca } from "./Marca";
 
@@ -38,13 +37,13 @@ export function Cabecalho() {
         </button>
         <nav className={`menu${aberto ? " aberto" : ""}`} onClick={() => setAberto(false)}>
           {links.map((l) => (
-            <Link key={l.href} href={l.href}>
+            <a key={l.href} href={l.href}>
               {l.texto}
-            </Link>
+            </a>
           ))}
-          <Link href="/#simulador" className="botao">
+          <a href="/#simulador" className="botao">
             Monte seu site
-          </Link>
+          </a>
         </nav>
       </div>
     </header>

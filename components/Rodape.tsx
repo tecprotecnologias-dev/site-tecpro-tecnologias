@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { empresa, linkWhatsApp, modelos } from "@/lib/dados";
 import { Marca } from "./Marca";
 
@@ -18,9 +17,9 @@ export function Rodape() {
             <ul>
               {modelos.map((m) => (
                 <li key={m.slug}>
-                  <Link href={`/modelos/${m.slug}/`}>
+                  <a href={`/modelos/${m.slug}/`}>
                     {m.segmento}: {m.nome}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Previa } from "@/components/Previa";
 import { clientesPublicados, modelos } from "@/lib/dados";
 
@@ -66,9 +65,9 @@ export default function Portfolio() {
                       Demonstração em breve
                     </span>
                   )}
-                  <Link href={`/modelos/${m.slug}/`} className="botao botao-contorno">
+                  <a href={`/modelos/${m.slug}/`} className="botao botao-contorno">
                     Detalhes e valores
-                  </Link>
+                  </a>
                 </div>
               </div>
             ))}
@@ -109,9 +108,9 @@ export default function Portfolio() {
                 <h3>Os primeiros projetos estão chegando.</h3>
                 <p>Em breve, você poderá visitar aqui os sites que criamos para os nossos clientes.</p>
               </div>
-              <Link href="/#simulador" className="botao botao-contorno">
+              <a href="/#simulador" className="botao botao-contorno">
                 Seja o próximo
-              </Link>
+              </a>
             </div>
           )}
         </div>
@@ -123,9 +122,9 @@ export default function Portfolio() {
           <h2 className="titulo">
             O próximo site <em>pode ser o seu.</em>
           </h2>
-          <Link href="/#simulador" className="botao">
+          <a href="/#simulador" className="botao">
             Monte o seu projeto
-          </Link>
+          </a>
         </div>
       </section>
     </>

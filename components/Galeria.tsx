@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useState } from "react";
 import { modelos, segmentos } from "@/lib/dados";
 import { Previa } from "./Previa";
@@ -26,7 +25,7 @@ export function Galeria() {
 
       <div className="grade-modelos">
         {visiveis.map((m) => (
-          <Link key={m.slug} href={`/modelos/${m.slug}/`} className="cartao-modelo">
+          <a key={m.slug} href={`/modelos/${m.slug}/`} className="cartao-modelo">
             <Previa modelo={m} />
             <div className="cartao-info">
               <div>
@@ -40,7 +39,7 @@ export function Galeria() {
                 </svg>
               </span>
             </div>
-          </Link>
+          </a>
         ))}
 
         <div className="sob-medida">
@@ -53,9 +52,9 @@ export function Galeria() {
                 : "Criamos sites para cursos, imobiliárias, viagem, fitness, finanças, decoração e muito mais."}
             </p>
           </div>
-          <Link href="/#simulador" className="botao botao-contorno">
+          <a href="/#simulador" className="botao botao-contorno">
             Pedir projeto
-          </Link>
+          </a>
         </div>
       </div>
     </>

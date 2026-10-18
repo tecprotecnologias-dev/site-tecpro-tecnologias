@@ -1,11 +1,14 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 
 // Anima a entrada dos elementos marcados com data-revelar.
+// Roda de novo a cada troca de página e observa elementos que surgirem depois.
 export function Revelar() {
+  const caminho = usePathname();
+
   useEffect(() => {
-    const alvos = document.querySelectorAll("[data-revelar]");
     const observador = new IntersectionObserver(
       (entradas) => {
         for (const e of entradas) {
@@ -15,11 +18,22 @@ export function Revelar() {
           }
         }
       },
-      { threshold: 0.12 },
+      { threshold: 0, rootMargin: "0px 0px -6% 0px" },
     );
-    alvos.forEach((a) => observador.observe(a));
-    return () => observador.disconnect();
-  }, []);
+
+    const observarPendentes = () => {
+      document.querySelectorAll("[data-revelar]:not(.visivel)").forEach((a) => observador.observe(a));
+    };
+    observarPendentes();
+
+    const mutacoes = new MutationObserver(observarPendentes);
+    mutacoes.observe(document.body, { childList: true, subtree: true });
+
+    return () => {
+      observador.disconnect();
+      mutacoes.disconnect();
+    };
+  }, [caminho]);
 
   return null;
 }

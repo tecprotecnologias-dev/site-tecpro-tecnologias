@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Galeria } from "@/components/Galeria";
 import { Previa } from "@/components/Previa";
 import { Simulador } from "@/components/Simulador";
@@ -43,12 +42,12 @@ export default function Inicio() {
               pronto para vender.
             </p>
             <div className="hero-acoes">
-              <Link href="#modelos" className="botao">
+              <a href="#modelos" className="botao">
                 Ver modelos
-              </Link>
-              <Link href="#simulador" className="botao botao-contorno">
+              </a>
+              <a href="#simulador" className="botao botao-contorno">
                 Simular investimento
-              </Link>
+              </a>
             </div>
             <div className="hero-numeros">
               <div>
@@ -304,9 +303,9 @@ export default function Inicio() {
           <h2 className="titulo">
             A primeira impressão <em>é o seu site.</em>
           </h2>
-          <Link href="#simulador" className="botao">
+          <a href="#simulador" className="botao">
             Quero o meu site
-          </Link>
+          </a>
         </div>
       </section>
     </>
