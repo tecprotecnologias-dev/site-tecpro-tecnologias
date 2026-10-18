@@ -6,13 +6,15 @@ Marque com `[x]` o que for concluído. A documentação técnica está no [READM
 ## Rápido (você mesma faz em minutos)
 
 - [ ] **Atualizar links nas redes:** colocar `tecprotecnologias.com.br` e `contato@tecprotecnologias.com.br` na bio do Instagram e no Facebook.
-- [ ] **Google Search Console:** cadastrar o site para aparecer nas buscas do Google e enviar o sitemap (`https://tecprotecnologias.com.br/sitemap.xml`). A verificação pelo Cloudflare é quase automática.
+- [ ] **Conferir no Google:** em alguns dias, pesquisar `site:tecprotecnologias.com.br`. Se não aparecer em uma semana, olhar o Search Console (Indexação > Páginas).
+- [ ] **Marca no INPI:** pesquisar "TECPRO" em busca.inpi.gov.br (Marcas), nas classes 42 (sites e software) e 35 (marketing). Há outras empresas com "TecPro" no nome; se ninguém tiver registro nessas classes, considerar registrar "TecPro Tecnologias".
 - [ ] **Google Meu Negócio:** criar o perfil da empresa no Google, sem mostrar endereço nem telefone.
 - [ ] **WhatsApp Business:** configurar a mensagem de saudação e a de ausência (Ferramentas comerciais), por exemplo "Recebemos seu pedido! Respondemos em até 1 dia útil."
 
 ## No site (junto com o Claude)
 
 - [ ] **Prazos de entrega:** confirmar ou trocar os prazos de exemplo (Site estilizado: até 15 dias úteis; Site + Marketing: até 25 dias úteis). Ficam em `lib/dados.ts`.
+- [ ] **Ficha da empresa para o Google:** dados estruturados (JSON-LD `Organization`) com nome, logo, site, e-mail e links do Instagram e do Facebook, para o Google não confundir a TecPro com outras empresas de nome parecido.
 - [ ] **Assinatura de e-mail:** montar uma assinatura com o logo, o site e o Instagram para colar no Gmail.
 - [ ] **Demonstrações dos 4 modelos:** criar as cópias com nomes fictícios e ligar o botão "Ver demonstração" (`demoUrl` em `lib/dados.ts`).
   - [ ] Ofício Barbearia (base: projeto da barbearia, já em Next.js)
@@ -47,6 +49,7 @@ Marque com `[x]` o que for concluído. A documentação técnica está no [READM
 - [x] Logo novo, cores da marca, contatos reais e preços definidos com pesquisa de mercado.
 - [x] Página Portfólio e menu corrigido.
 - [x] Telefone fora do site: o WhatsApp só aparece ao enviar um pedido.
+- [x] Google Search Console: domínio verificado pelo Cloudflare e sitemap processado com 6 páginas (18/10/2026).
 
 ## Lembretes
 

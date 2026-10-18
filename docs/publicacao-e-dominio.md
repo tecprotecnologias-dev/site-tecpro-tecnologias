@@ -11,6 +11,7 @@ Todas as contas da empresa usam o e-mail **tecprotecnologias@gmail.com**.
 | Registro.br | conta da titular do domínio |
 | Supabase | organização "TecPro Tecnologias" |
 | Brevo | conta "TecPro Tecnologias" |
+| Google Search Console | tecprotecnologias@gmail.com |
 
 ## Publicação automática
 
@@ -59,6 +60,7 @@ Para acompanhar ou repetir uma publicação: Cloudflare > **Compute** > **Worker
 | TXT | raiz | `brevo-code:...` | Prova de domínio para o Brevo |
 | CNAME | `brevo1._domainkey`, `brevo2._domainkey` | `b1/b2...dkim.brevo.com` | Assinatura dos e-mails enviados pelo Brevo |
 | TXT | `_dmarc` | `v=DMARC1; p=reject;` | Proteção contra uso falso do domínio |
+| TXT | raiz | `google-site-verification=...` | Prova de domínio para o Google Search Console. Não apague |
 
 Os registros "Worker" são criados pelo Cloudflare ao adicionar o domínio no projeto (**Domains & Routes** > **Custom domain**). Não use "Workers Routes" para isso.
 
@@ -67,3 +69,11 @@ Os registros "Worker" são criados pelo Cloudflare ao adicionar o domínio no pr
 ## Configurações de robôs
 
 No cadastro do domínio, Search, Agent e Training foram deixados como "Allow". "Bot Preference Sync" ligado (acrescenta as regras no robots.txt).
+
+## Google Search Console
+
+Cadastrado em 2026-10-18 como propriedade do tipo **Domínio** (`tecprotecnologias.com.br`, cobre com e sem `www`). A verificação foi feita pelo botão automático do Cloudflare, que criou o registro TXT `google-site-verification`.
+
+- Sitemap enviado: `https://tecprotecnologias.com.br/sitemap.xml` (gerado por `app/sitemap.ts`). Em propriedade do tipo Domínio, o campo de sitemap exige o endereço completo, não só `sitemap.xml`.
+- Para pedir que o Google leia uma página nova ou alterada: barra "Inspecionar qualquer URL" no topo > colar o endereço > **Solicitar indexação**.
+- Para conferir o que o Google já conhece: pesquisar `site:tecprotecnologias.com.br`.

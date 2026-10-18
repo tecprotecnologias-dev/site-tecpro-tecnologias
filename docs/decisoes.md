@@ -21,3 +21,5 @@ Decisões tomadas no projeto, com o motivo. A mais recente fica no fim. Ao tomar
 | 2026-10-18 | E-mail: Cloudflare Email Routing + Brevo + Gmail | Custo zero e tudo dentro do Gmail que a TecPro já usa |
 | 2026-10-18 | Desligar o endereço `.workers.dev` | Um único endereço para o Google e para divulgação |
 | 2026-10-18 | Documentação dentro do repositório (`README.md` e `docs/`) | Qualquer pessoa que trabalhar no site encontra tudo junto do código |
+| 2026-10-18 | Google Search Console como propriedade do tipo Domínio | Cobre `www` e a raiz juntos; verificação automática pelo Cloudflare |
+| 2026-10-18 | Logo do globo mantido | Comparado lado a lado com o logo laranja (>>); a TecPro preferiu o globo |
