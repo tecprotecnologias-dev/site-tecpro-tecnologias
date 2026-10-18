@@ -3,6 +3,12 @@
 Lista de tarefas do site da TecPro (https://tecprotecnologias.com.br).
 Marque com `[x]` o que for concluído. A documentação técnica está no [README](README.md) e na pasta [docs](docs/).
 
+## Por onde recomeçar (anotado em 18/10/2026)
+
+1. Confirmar os prazos de entrega em `lib/dados.ts` (rápido).
+2. Criar as demonstrações dos 4 modelos, que deixam a vitrine mais convincente.
+3. Enquanto isso, ir fazendo as tarefas rápidas abaixo (fotos e links das redes, Google Meu Negócio, WhatsApp Business).
+
 ## Rápido (você mesma faz em minutos)
 
 - [ ] **Foto de perfil das redes:** trocar no Facebook (hoje está o "T"), no Instagram e no WhatsApp Business pelo globo: `docs/marca/tecpro-globo-perfil-1080.jpg` (cópia na pasta `logo-redes-sociais`).
