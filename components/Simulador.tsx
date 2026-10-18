@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { ferramentas, linkWhatsApp, modelos, pacotes, planosAjuste, reais, segmentos } from "@/lib/dados";
+import { salvarPedido } from "@/lib/supabase";
 
 const SOB_MEDIDA = "sob-medida";
 
@@ -12,6 +13,7 @@ export function Simulador({ modeloInicial = modelos[0].slug }: { modeloInicial?:
   const [ajusteId, setAjusteId] = useState("um");
   const [escolhidas, setEscolhidas] = useState<string[]>([]);
   const [nome, setNome] = useState("");
+  const [whatsapp, setWhatsapp] = useState("");
   const [negocio, setNegocio] = useState("");
   const [cidade, setCidade] = useState("");
   const [detalhes, setDetalhes] = useState("");
@@ -42,13 +44,16 @@ export function Simulador({ modeloInicial = modelos[0].slug }: { modeloInicial?:
     if (comMarketing) setPacoteId(comMarketing.id);
   }
 
-  const podeEnviar = aceite && nome.trim() !== "" && negocio.trim() !== "";
+  const digitosWhatsapp = whatsapp.replace(/\D/g, "");
+  const podeEnviar =
+    aceite && nome.trim() !== "" && negocio.trim() !== "" && digitosWhatsapp.length >= 10 && digitosWhatsapp.length <= 13;
 
   function enviar() {
     const linhas = [
       "Olá, TecPro! Quero contratar um site.",
       "",
       `Nome: ${nome}`,
+      `WhatsApp: ${whatsapp}`,
       `Negócio: ${negocio}`,
       cidade && `Cidade: ${cidade}`,
       "",
@@ -62,7 +67,22 @@ export function Simulador({ modeloInicial = modelos[0].slug }: { modeloInicial?:
       "",
       "Autorizo o contato da TecPro Tecnologias pelo WhatsApp sobre este pedido.",
     ].filter((l) => l !== false && l !== null && l !== undefined) as string[];
+    // Abre o WhatsApp primeiro (dentro do clique, para o navegador não bloquear) e grava o pedido em seguida.
     window.open(linkWhatsApp(linhas.join("\n")), "_blank", "noopener");
+    void salvarPedido({
+      nome: nome.trim(),
+      whatsapp: whatsapp.trim(),
+      negocio: negocio.trim(),
+      cidade: cidade.trim() || null,
+      modelo: nomeModelo,
+      pacote: pacote.nome,
+      plano_ajuste: ajuste.nome,
+      marketing: ferramentasEscolhidas.map((f) => f.nome),
+      valor_unico: textoUnico,
+      valor_mensal: textoMensal,
+      detalhes: detalhes.trim() || null,
+      consentimento: true,
+    });
   }
 
   return (
@@ -167,21 +187,34 @@ export function Simulador({ modeloInicial = modelos[0].slug }: { modeloInicial?:
           <div className="campos">
             <label className="campo">
               Seu nome
-              <input value={nome} onChange={(e) => setNome(e.target.value)} autoComplete="name" />
+              <input value={nome} onChange={(e) => setNome(e.target.value)} autoComplete="name" maxLength={120} />
+            </label>
+            <label className="campo">
+              Seu WhatsApp com DDD
+              <input
+                value={whatsapp}
+                onChange={(e) => setWhatsapp(e.target.value)}
+                type="tel"
+                inputMode="tel"
+                autoComplete="tel"
+                placeholder="(24) 99999-9999"
+                maxLength={20}
+              />
             </label>
             <label className="campo">
               Nome do negócio
-              <input value={negocio} onChange={(e) => setNegocio(e.target.value)} autoComplete="organization" />
+              <input value={negocio} onChange={(e) => setNegocio(e.target.value)} autoComplete="organization" maxLength={120} />
             </label>
-            <label className="campo campo-inteiro">
+            <label className="campo">
               Cidade
-              <input value={cidade} onChange={(e) => setCidade(e.target.value)} autoComplete="address-level2" />
+              <input value={cidade} onChange={(e) => setCidade(e.target.value)} autoComplete="address-level2" maxLength={120} />
             </label>
             <label className="campo campo-inteiro">
               Conte um pouco sobre o que você imagina
               <textarea
                 value={detalhes}
                 onChange={(e) => setDetalhes(e.target.value)}
+                maxLength={2000}
                 placeholder="Cores, páginas, referências, se já tem logo e domínio..."
               />
             </label>
@@ -228,7 +261,7 @@ export function Simulador({ modeloInicial = modelos[0].slug }: { modeloInicial?:
           Enviar pelo WhatsApp
         </button>
         <p className="resumo-aviso">
-          {podeEnviar ? `Prazo estimado: ${pacote.prazo}.` : "Preencha seu nome, o negócio e o consentimento."}
+          {podeEnviar ? `Prazo estimado: ${pacote.prazo}.` : "Preencha nome, WhatsApp, negócio e o consentimento."}
         </p>
       </aside>
     </div>
