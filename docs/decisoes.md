@@ -25,3 +25,4 @@ Decisões tomadas no projeto, com o motivo. A mais recente fica no fim. Ao tomar
 | 2026-10-18 | Logo do globo mantido | Comparado lado a lado com o logo laranja (>>); a TecPro preferiu o globo |
 | 2026-10-18 | Ícone da aba simplificado ("T" no anel) em vez do globo inteiro | O globo virava borrão em 16 px |
 | 2026-10-18 | Ficha da empresa (JSON-LD) sem telefone e sem endereço | Ajudar o Google a separar a TecPro de outras "TecPro", mantendo a regra de não mostrar telefone e cidade |
+| 2026-10-18 | Foto de perfil das redes com o globo do site (o "T" não é usado nas redes) | A TecPro quer o logo igual no site e nas redes |

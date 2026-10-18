@@ -55,6 +55,7 @@ lib/
   dados.ts              TODO o conteúdo: textos, modelos, preços, contatos
   supabase.ts           gravação dos pedidos no banco
 public/marca/           logo original e emblema recortado
+docs/marca/             foto de perfil para as redes sociais (não vai para o site)
 docs/                   documentação de desenvolvimento
 wrangler.jsonc          configuração de publicação no Cloudflare
 ```

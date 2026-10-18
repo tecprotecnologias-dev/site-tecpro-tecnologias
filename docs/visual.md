@@ -34,6 +34,12 @@ Carregadas por `next/font/google` em `app/layout.tsx` e expostas como `--fonte-s
 | `app/apple-icon.png` | O mesmo ícone em 180 px, sem transparência, para a tela inicial do iPhone |
 | `public/marca/favicon.png` | Cópia do ícone em 256 px, para usar fora do site |
 
+### Redes sociais
+
+Foto de perfil (Instagram, Facebook, WhatsApp Business e avatar do `contato@` no Google): **o mesmo globo do site**, em `docs/marca/tecpro-globo-perfil-1080.jpg` (1080 x 1080 px, cabe inteiro no corte redondo). Uma cópia fica na pasta `logo-redes-sociais`, ao lado da pasta do site. Foi ampliada do logo original de 350 px; quando chegar o logo em alta resolução, refazer.
+
+Regra da TecPro: o logo tem de ser **igual** no site e nas redes.
+
 O nome "TECPRO / TECNOLOGIAS" ao lado do emblema é texto (`components/Marca.tsx`), não imagem. Se chegar uma versão do logo em alta resolução ou SVG, troque o emblema por ela.
 
 ## Padrões de estilo

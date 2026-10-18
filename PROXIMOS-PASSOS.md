@@ -5,6 +5,7 @@ Marque com `[x]` o que for concluído. A documentação técnica está no [READM
 
 ## Rápido (você mesma faz em minutos)
 
+- [ ] **Foto de perfil das redes:** trocar no Facebook (hoje está o "T"), no Instagram e no WhatsApp Business pelo globo: `docs/marca/tecpro-globo-perfil-1080.jpg` (cópia na pasta `logo-redes-sociais`).
 - [ ] **Atualizar links nas redes:** colocar `tecprotecnologias.com.br` e `contato@tecprotecnologias.com.br` na bio do Instagram e no Facebook.
 - [ ] **Conferir no Google:** em alguns dias, pesquisar `site:tecprotecnologias.com.br`. Se não aparecer em uma semana, olhar o Search Console (Indexação > Páginas).
 - [ ] **Marca no INPI:** pesquisar "TECPRO" em busca.inpi.gov.br (Marcas), nas classes 42 (sites e software) e 35 (marketing). Há outras empresas com "TecPro" no nome; se ninguém tiver registro nessas classes, considerar registrar "TecPro Tecnologias".
