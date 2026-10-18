@@ -1580,3 +1580,27 @@ textarea {
   gap: 20px;
   padding: 16px 6px 6px;
 }
+
+/* Ícones das redes sociais no rodapé */
+.redes {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.redes a {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--linha-forte);
+  border-radius: 50%;
+  color: var(--marfim);
+  transition: background 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.redes a:hover {
+  background: var(--acento);
+  border-color: var(--acento);
+  color: var(--preto);
+}

@@ -41,6 +41,7 @@ O nome "TECPRO / TECNOLOGIAS" ao lado do emblema é texto (`components/Marca.tsx
 - Cantos levemente arredondados (6 px) e bordas de 1 px
 - Números grandes em contorno nas etapas
 - Seção de Valores em fundo claro (`.secao-clara`) para quebrar a página escura
+- Redes sociais no rodapé só como ícones redondos (`.redes`), com nome acessível em `aria-label`
 - Animações suaves; tudo desligado para quem ativou "reduzir movimento" no sistema
 
 ## Responsivo
