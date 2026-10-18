@@ -183,9 +183,9 @@ export type PlanoAjuste = { id: string; nome: string; ajustes: number; valor: nu
 // Plano mensal: quantos ajustes por mês o cliente precisa.
 export const planosAjuste: PlanoAjuste[] = [
   { id: "nenhum", nome: "Sem plano", ajustes: 0, valor: 0, descricao: "Ajustes avulsos quando precisar." },
-  { id: "um", nome: "1 ajuste", ajustes: 1, valor: 90, descricao: "Uma alteração por mês." }, // EXEMPLO
-  { id: "dois", nome: "2 ajustes", ajustes: 2, valor: 160, descricao: "Duas alterações por mês." }, // EXEMPLO
-  { id: "tres", nome: "3 ajustes", ajustes: 3, valor: 220, descricao: "Três alterações por mês." }, // EXEMPLO
+  { id: "um", nome: "1 ajuste", ajustes: 1, valor: 90, descricao: "Uma alteração por mês." }, // valor confirmado
+  { id: "dois", nome: "2 ajustes", ajustes: 2, valor: 160, descricao: "Duas alterações por mês." }, // valor confirmado
+  { id: "tres", nome: "3 ajustes", ajustes: 3, valor: 220, descricao: "Três alterações por mês." }, // valor confirmado
   { id: "mais", nome: "4 ou mais", ajustes: 4, valor: null, descricao: "Plano sob medida para a sua rotina." },
 ];
 
