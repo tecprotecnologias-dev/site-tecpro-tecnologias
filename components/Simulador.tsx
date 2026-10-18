@@ -45,8 +45,13 @@ export function Simulador({ modeloInicial = modelos[0].slug }: { modeloInicial?:
   }
 
   const digitosWhatsapp = whatsapp.replace(/\D/g, "");
-  const podeEnviar =
-    aceite && nome.trim() !== "" && negocio.trim() !== "" && digitosWhatsapp.length >= 10 && digitosWhatsapp.length <= 13;
+  const faltando = [
+    nome.trim() === "" && "seu nome",
+    (digitosWhatsapp.length < 10 || digitosWhatsapp.length > 13) && "seu WhatsApp com DDD",
+    negocio.trim() === "" && "o nome do negócio",
+    !aceite && "a autorização no fim do formulário",
+  ].filter(Boolean) as string[];
+  const podeEnviar = faltando.length === 0;
 
   function enviar() {
     const linhas = [
@@ -68,8 +73,11 @@ export function Simulador({ modeloInicial = modelos[0].slug }: { modeloInicial?:
       "Autorizo o contato da TecPro Tecnologias pelo WhatsApp sobre este pedido.",
     ].filter((l) => l !== false && l !== null && l !== undefined) as string[];
     // Abre o WhatsApp primeiro (dentro do clique, para o navegador não bloquear) e grava o pedido em seguida.
-    window.open(linkWhatsApp(linhas.join("\n")), "_blank", "noopener");
-    void salvarPedido({
+    // Se o navegador bloquear a janela nova (celular, navegador do Instagram), abre na mesma aba.
+    const link = linkWhatsApp(linhas.join("\n"));
+    const janela = window.open(link, "_blank");
+    if (janela) janela.opener = null;
+    const gravacao = salvarPedido({
       nome: nome.trim(),
       whatsapp: whatsapp.trim(),
       negocio: negocio.trim(),
@@ -83,6 +91,8 @@ export function Simulador({ modeloInicial = modelos[0].slug }: { modeloInicial?:
       detalhes: detalhes.trim() || null,
       consentimento: true,
     });
+    // Na mesma aba, espera o pedido ser gravado antes de sair da página.
+    if (!janela) void gravacao.finally(() => (window.location.href = link));
   }
 
   return (
@@ -261,7 +271,7 @@ export function Simulador({ modeloInicial = modelos[0].slug }: { modeloInicial?:
           Enviar pelo WhatsApp
         </button>
         <p className="resumo-aviso">
-          {podeEnviar ? `Prazo estimado: ${pacote.prazo}.` : "Preencha nome, WhatsApp, negócio e o consentimento."}
+          {podeEnviar ? `Prazo estimado: ${pacote.prazo}.` : `Para enviar, falta preencher: ${faltando.join(", ")}.`}
         </p>
       </aside>
     </div>
