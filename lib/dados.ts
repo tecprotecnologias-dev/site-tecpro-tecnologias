@@ -6,10 +6,10 @@ export const empresa = {
   slogan: "Sites sob medida para marcas exigentes",
   whatsapp: "5524999999999", // EXEMPLO: só números, com 55 e DDD
   whatsappTexto: "(24) 99999-9999", // EXEMPLO
-  email: "contato@tecprotecnologias.com.br", // EXEMPLO
+  email: "tecprotecnologias@gmail.com", // trocar por contato@tecprotecnologias.com.br quando existir
   instagram: "tecprotecnologias", // EXEMPLO
   cidade: "Volta Redonda, RJ",
-  url: "https://tecprotecnologias.com.br", // EXEMPLO
+  url: "https://tecprotecnologias.com.br", // domínio em registro no Registro.br
 };
 
 export type Segmento = {
