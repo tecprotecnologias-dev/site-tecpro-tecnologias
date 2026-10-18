@@ -6,6 +6,7 @@ import { Marca } from "./Marca";
 
 const links = [
   { href: "/#modelos", texto: "Modelos" },
+  { href: "/portfolio/", texto: "Portfólio" },
   { href: "/#como-funciona", texto: "Como funciona" },
   { href: "/#valores", texto: "Valores" },
   { href: "/#marketing", texto: "Marketing" },

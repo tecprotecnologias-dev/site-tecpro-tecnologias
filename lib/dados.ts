@@ -253,11 +253,35 @@ export const kit = [
   { item: "WhatsApp", sugestao: "WhatsApp Business e API oficial para automação" },
 ];
 
-// Sites reais de clientes. Só publicar com a autorização de cada dono.
-export const clientes = [
-  { nome: "Casa do Chef", segmento: "Buffet itinerante", url: "https://casadochefvr.com.br", autorizado: false },
-  { nome: "Só Chef", segmento: "Marmitaria", url: "https://marmitasdochef.netlify.app", autorizado: false },
+// Sites reais de clientes já entregues.
+// Só aparecem no site com autorizado: true (autorização do dono do negócio).
+export type Cliente = {
+  nome: string;
+  segmento: string;
+  descricao: string;
+  url: string;
+  imagem?: string; // foto de tela em /public/portfolio, opcional
+  autorizado: boolean;
+};
+
+export const clientes: Cliente[] = [
+  {
+    nome: "Casa do Chef",
+    segmento: "Buffet itinerante",
+    descricao: "Site elegante para buffet que atende em casas, sítios e empresas, com pedido de orçamento pelo WhatsApp.",
+    url: "https://casadochefvr.com.br",
+    autorizado: false, // aguardando autorização do dono
+  },
+  {
+    nome: "Só Chef",
+    segmento: "Marmitaria",
+    descricao: "Cardápio de marmitas organizado por categorias, com pedido direto pelo WhatsApp.",
+    url: "https://marmitasdochef.netlify.app",
+    autorizado: false, // aguardando autorização da dona
+  },
 ];
+
+export const clientesPublicados = clientes.filter((c) => c.autorizado);
 
 export function linkWhatsApp(mensagem: string) {
   return `https://wa.me/${empresa.whatsapp}?text=${encodeURIComponent(mensagem)}`;

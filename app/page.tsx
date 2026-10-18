@@ -3,7 +3,7 @@ import { Galeria } from "@/components/Galeria";
 import { Previa } from "@/components/Previa";
 import { Simulador } from "@/components/Simulador";
 import {
-  clientes,
+  clientesPublicados,
   etapas,
   exemplosAjuste,
   ferramentas,
@@ -17,7 +17,7 @@ import {
 
 export default function Inicio() {
   const faixa = [...segmentos, ...segmentos];
-  const clientesVisiveis = clientes.filter((c) => c.autorizado);
+  const clientesVisiveis = clientesPublicados;
 
   return (
     <>
