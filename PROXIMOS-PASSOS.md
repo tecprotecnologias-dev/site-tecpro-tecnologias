@@ -1,7 +1,7 @@
 # Próximos passos da TecPro Tecnologias
 
 Lista de tarefas do site da TecPro (https://tecprotecnologias.com.br).
-Marque com `[x]` o que for concluído.
+Marque com `[x]` o que for concluído. A documentação técnica está no [README](README.md) e na pasta [docs](docs/).
 
 ## Rápido (você mesma faz em minutos)
 
@@ -29,6 +29,7 @@ Marque com `[x]` o que for concluído.
   - pedido marcado como "pago" no Supabase;
   - formulário de briefing depois do pagamento;
   - termos claros (o que inclui, prazo, rodadas de ajuste) e direito de arrependimento de 7 dias (CDC, art. 49).
+- [ ] **Consentimento para marketing:** antes de usar a base de pedidos em campanhas (e-mail, SMS, WhatsApp), incluir no simulador uma caixa opcional e separada de autorização para receber novidades, com opção de sair (LGPD). Hoje o consentimento cobre só a resposta ao pedido.
 - [ ] **Endereço principal (opcional):** redirecionar `www.tecprotecnologias.com.br` para `tecprotecnologias.com.br`.
 
 ## Depende de terceiros
