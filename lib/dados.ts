@@ -116,7 +116,7 @@ export const modelos: Modelo[] = [
   },
   {
     slug: "educacao",
-    nome: "Atlas Estudos",
+    nome: "Hub de Estudos",
     segmento: "Educação",
     segmentos: ["educacao", "cursos", "blog"],
     chamada: "Conteúdo organizado, aluno engajado.",

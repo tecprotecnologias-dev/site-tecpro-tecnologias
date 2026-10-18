@@ -26,7 +26,7 @@ Marque com `[x]` o que for concluído. A documentação técnica está no [READM
   - [ ] Ofício Barbearia (base: projeto da barbearia, já em Next.js)
   - [ ] Maison Itinerante (base: Casa do Chef)
   - [ ] Prato Nobre (base: Só Chef)
-  - [ ] Atlas Estudos (base: hub de estudos)
+  - [ ] Hub de Estudos (base: hub de estudos, mesmo nome do site original)
 - [ ] **Fotos de tela reais** dos modelos no lugar das miniaturas desenhadas em código, quando as demonstrações existirem.
 - [ ] **Área administrativa (`/admin`):** login só da TecPro (Supabase) para cadastrar, sem mexer no código:
   - modelos (nome, segmento, descrição, o que inclui, link da demonstração, foto);
