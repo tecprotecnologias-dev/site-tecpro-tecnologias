@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@500;600;800&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; background: #0a0a0b; }
+  #capa {
+    position: relative; width: 1640px; height: 924px; overflow: hidden;
+    background:
+      radial-gradient(ellipse 700px 520px at 78% 50%, rgba(52, 184, 228, 0.16), transparent 70%),
+      radial-gradient(ellipse 600px 400px at 92% 85%, rgba(47, 107, 224, 0.14), transparent 70%),
+      #0a0a0b;
+    color: #f3eee4; font-family: "Manrope", sans-serif;
+  }
+  /* linhas finas de fundo */
+  #capa::before {
+    content: ""; position: absolute; inset: 0;
+    background-image: linear-gradient(rgba(243,238,228,0.045) 1px, transparent 1px), linear-gradient(90deg, rgba(243,238,228,0.045) 1px, transparent 1px);
+    background-size: 82px 82px;
+    mask-image: radial-gradient(ellipse 900px 600px at 75% 50%, #000 20%, transparent 75%);
+  }
+  .texto { position: absolute; left: 150px; top: 50%; transform: translateY(-50%); }
+  .rotulo { display: inline-flex; align-items: center; gap: 18px; font-size: 21px; font-weight: 800; letter-spacing: 0.24em; text-transform: uppercase; color: #a39d93; }
+  .rotulo::before { content: ""; width: 46px; height: 2px; background: #34b8e4; }
+  h1 { font-family: "Instrument Serif", serif; font-weight: 400; font-size: 118px; line-height: 0.98; margin: 26px 0 28px; letter-spacing: -0.01em; }
+  h1 em { color: #6fd3ee; }
+  .frase { font-size: 30px; color: #a39d93; margin: 0 0 34px; font-weight: 500; }
+  .site { font-size: 26px; font-weight: 600; letter-spacing: 0.04em; color: #f3eee4; display: inline-flex; align-items: center; gap: 14px; }
+  .site span { width: 10px; height: 10px; border-radius: 50%; background: #34b8e4; }
+  .globo { position: absolute; right: 150px; top: 50%; transform: translateY(-50%); width: 400px; height: 400px; opacity: 0.95; }
+  .anel { position: absolute; right: 95px; top: 50%; transform: translateY(-50%); width: 510px; height: 510px; border: 1px solid rgba(52,184,228,0.22); border-radius: 50%; }
+</style></head>
+<body><div id="capa">
+  <div class="anel"></div>
+  <img class="globo" src="../../public/marca/tecpro-emblema.png" alt="">
+  <div class="texto">
+    <span class="rotulo">Estúdio de sites sob medida</span>
+    <h1>Seu negócio merece<br>um site <em>à altura.</em></h1>
+    <p class="frase">O negócio é seu, o design deixa com a gente.</p>
+    <span class="site"><span></span>tecprotecnologias.com.br</span>
+  </div>
+</div></body></html>
