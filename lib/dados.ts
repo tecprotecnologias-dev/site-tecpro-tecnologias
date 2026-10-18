@@ -131,7 +131,7 @@ export const modelos: Modelo[] = [
       "Modo claro e escuro",
     ],
     personalizacao: ["Marca da escola ou do professor", "Disciplinas e materiais", "Banco de questões", "Domínio próprio"],
-    demoUrl: "",
+    demoUrl: "https://estudos.tecprotecnologias.com.br",
     paleta: { fundo: "#0f1624", texto: "#e9eef7", acento: "#e8743b", suave: "#1a2436" },
   },
 ];

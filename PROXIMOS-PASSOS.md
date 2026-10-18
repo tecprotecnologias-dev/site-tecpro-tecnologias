@@ -26,7 +26,7 @@ Marque com `[x]` o que for concluído. A documentação técnica está no [READM
   - [x] Ofício Barbearia: no ar em https://barbearia.tecprotecnologias.com.br (repositório `oficio-barbearia`, pasta `demo-oficio-barbearia`).
   - [ ] Maison Itinerante (base: Casa do Chef)
   - [ ] Prato Nobre (base: Só Chef)
-  - [ ] Hub de Estudos: código já no repositório `Hub-de-Estudos`; falta publicar no Cloudflare (estudos.tecprotecnologias.com.br) e cadastrar o endereço novo no Supabase.
+  - [x] Hub de Estudos: no ar em https://estudos.tecprotecnologias.com.br (repositório `Hub-de-Estudos`, Supabase em outra conta de e-mail).
 - [ ] **Fotos de tela reais** dos modelos no lugar das miniaturas desenhadas em código, quando as demonstrações existirem.
 - [ ] **Área administrativa (`/admin`):** login só da TecPro (Supabase) para cadastrar, sem mexer no código:
   - modelos (nome, segmento, descrição, o que inclui, link da demonstração, foto);
