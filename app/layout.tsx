@@ -3,6 +3,7 @@ import { Instrument_Serif, Manrope } from "next/font/google";
 import { Cabecalho } from "@/components/Cabecalho";
 import { Rodape } from "@/components/Rodape";
 import { Revelar } from "@/components/Revelar";
+import { BotaoWhatsApp } from "@/components/BotaoWhatsApp";
 import { empresa } from "@/lib/dados";
 import "./globals.css";
 
@@ -57,6 +58,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Cabecalho />
         <main>{children}</main>
         <Rodape />
+        <BotaoWhatsApp />
         <Revelar />
       </body>
     </html>
