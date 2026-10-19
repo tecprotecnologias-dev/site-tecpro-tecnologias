@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Previa } from "@/components/Previa";
 import { Simulador } from "@/components/Simulador";
-import { modelos } from "@/lib/dados";
+import { empresa, modelos } from "@/lib/dados";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -14,9 +14,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const modelo = modelos.find((m) => m.slug === slug);
   if (!modelo) return {};
+  const title = `Site para ${modelo.segmento.toLowerCase()}: ${modelo.nome}`;
+  // Imagem de compartilhamento própria de cada modelo (public/compartilhar)
+  const imagem = { url: `/compartilhar/modelo-${modelo.slug}.jpg`, width: 1200, height: 630, alt: modelo.nome };
   return {
-    title: `Site para ${modelo.segmento.toLowerCase()}: ${modelo.nome}`,
+    title,
     description: modelo.descricao,
+    openGraph: {
+      type: "website",
+      locale: "pt_BR",
+      siteName: empresa.nome,
+      title: `${title} | ${empresa.nome}`,
+      description: modelo.descricao,
+      images: [imagem],
+    },
+    twitter: { card: "summary_large_image", images: [imagem.url] },
   };
 }
 

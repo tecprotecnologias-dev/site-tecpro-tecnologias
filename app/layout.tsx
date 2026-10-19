@@ -22,7 +22,10 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pt_BR",
     siteName: empresa.nome,
+    images: [{ url: "/compartilhar/tecpro.jpg", width: 1200, height: 630, alt: empresa.nome }],
   },
+  // Cartão grande quando o link é compartilhado (WhatsApp, Instagram, Facebook, X)
+  twitter: { card: "summary_large_image" },
 };
 
 // Ficha da empresa para o Google (JSON-LD). Sem telefone nem endereço, como no resto do site.
