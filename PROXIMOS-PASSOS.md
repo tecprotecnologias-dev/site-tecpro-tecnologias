@@ -39,6 +39,14 @@ Marque com `[x]` o que for concluído. A documentação técnica está no [READM
   - termos claros (o que inclui, prazo, rodadas de ajuste) e direito de arrependimento de 7 dias (CDC, art. 49).
 - [ ] **Consentimento para marketing:** antes de usar a base de pedidos em campanhas (e-mail, SMS, WhatsApp), incluir no simulador uma caixa opcional e separada de autorização para receber novidades, com opção de sair (LGPD). Hoje o consentimento cobre só a resposta ao pedido.
 - [ ] **Endereço principal (opcional):** redirecionar `www.tecprotecnologias.com.br` para `tecprotecnologias.com.br`.
+- [ ] **Contrato de prestação de serviços** (pedido em 18/10/2026), um modelo que serve para todo cliente, cobrindo:
+  - **Criação do site:** pacote contratado (Site estilizado ou Site + Marketing), o que está incluído, prazo de entrega, quantas rodadas de ajuste antes da entrega, o que o cliente precisa enviar (logo, fotos, textos), forma de pagamento.
+  - **Plano mensal de ajustes:** quantos ajustes por mês, o que conta como um ajuste, se os ajustes não usados acumulam, prazo para fazer cada ajuste, dia de vencimento, reajuste anual e como cancelar.
+  - **Promoção de lançamento:** permanência mínima de 6 meses no plano de 2 ajustes ou mais; se cancelar antes, paga a diferença do desconto (R$ 395).
+  - **Ferramentas de marketing** (e-mail, SMS, SEO, automação), quando contratadas, e custos pagos direto ao fornecedor (domínio, envios de SMS e WhatsApp).
+  - **Quem é dono de quê:** domínio no nome do cliente, conteúdo do cliente, código e modelo da TecPro.
+  - **Hospedagem**, LGPD (dados dos clientes do cliente), direito de arrependimento de 7 dias nas contratações online (CDC, art. 49), suspensão por falta de pagamento e foro.
+  - Depois de escrito, vale uma revisão rápida com um advogado.
 
 ## Depende de terceiros
 
