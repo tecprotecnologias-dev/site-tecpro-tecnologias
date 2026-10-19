@@ -1625,3 +1625,37 @@ textarea {
 .botao-whatsapp:hover {
   transform: scale(1.08);
 }
+
+/* Promoção de lançamento */
+.pacote-preco s {
+  font-size: 20px;
+  opacity: 0.5;
+}
+
+.pacote-promo {
+  margin-top: 16px;
+  padding: 14px 16px;
+  border-left: 3px solid var(--azul);
+  background: rgba(47, 107, 224, 0.08);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.pacote-promo b {
+  color: var(--azul);
+}
+
+.resumo-riscado {
+  margin-right: 10px;
+  font-size: 18px;
+  color: var(--cinza);
+}
+
+.resumo-promo {
+  margin-bottom: 16px;
+  padding: 12px 14px;
+  border-left: 3px solid var(--acento);
+  background: rgba(52, 184, 228, 0.08);
+  font-size: 13px;
+  line-height: 1.5;
+}

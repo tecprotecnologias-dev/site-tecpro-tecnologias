@@ -1,4 +1,5 @@
 import { Galeria } from "@/components/Galeria";
+import { PrecoPacote } from "@/components/PrecoPacote";
 import { Previa } from "@/components/Previa";
 import { Simulador } from "@/components/Simulador";
 import {
@@ -141,10 +142,7 @@ export default function Inicio() {
                 <span className="etiqueta">{p.comMarketing ? "Mais completo" : "Essencial"}</span>
                 <h3 style={{ marginTop: 14 }}>{p.nome}</h3>
                 <p className="pacote-resumo">{p.resumo}</p>
-                <div className="pacote-preco">
-                  <small>investimento único</small>
-                  <strong>{reais(p.valor)}</strong>
-                </div>
+                <PrecoPacote pacote={p} />
                 <ul>
                   {p.itens.map((item) => (
                     <li key={item}>{item}</li>

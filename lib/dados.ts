@@ -193,6 +193,28 @@ export const planosAjuste: PlanoAjuste[] = [
   { id: "mais", nome: "4 ou mais", ajustes: 4, valor: null, descricao: "Plano sob medida para a sua rotina." },
 ];
 
+// Promoção de lançamento: 50% no Site estilizado para quem assina 2 ajustes ou mais por mês.
+// Some sozinha do site depois de validaAte (o navegador confere a data).
+export const promocao = {
+  nome: "Promoção de lançamento",
+  pacoteId: "site",
+  desconto: 0.5,
+  ajustesMinimos: 2,
+  permanenciaMeses: 6,
+  validaAte: "2026-11-30",
+  validaAteTexto: "30/11/2026",
+};
+
+export function promocaoAtiva(agora = new Date()) {
+  return agora <= new Date(`${promocao.validaAte}T23:59:59-03:00`);
+}
+
+// Valor do pacote com a promoção, ou null quando ela não se aplica.
+export function valorPromocional(pacote: Pacote, ajuste: PlanoAjuste, agora = new Date()) {
+  if (!promocaoAtiva(agora) || pacote.id !== promocao.pacoteId || ajuste.ajustes < promocao.ajustesMinimos) return null;
+  return Math.round(pacote.valor * (1 - promocao.desconto));
+}
+
 export const exemplosAjuste = [
   "Trocar fotos, textos ou preços",
   "Publicar uma promoção ou novidade",

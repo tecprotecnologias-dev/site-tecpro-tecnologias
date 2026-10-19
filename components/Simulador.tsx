@@ -1,7 +1,18 @@
 "use client";
 
 import { useState } from "react";
-import { ferramentas, linkWhatsApp, modelos, pacotes, planosAjuste, reais, segmentos } from "@/lib/dados";
+import {
+  ferramentas,
+  linkWhatsApp,
+  modelos,
+  pacotes,
+  planosAjuste,
+  promocao,
+  promocaoAtiva,
+  reais,
+  segmentos,
+  valorPromocional,
+} from "@/lib/dados";
 import { salvarPedido } from "@/lib/supabase";
 
 const SOB_MEDIDA = "sob-medida";
@@ -30,7 +41,14 @@ export function Simulador({ modeloInicial = modelos[0].slug }: { modeloInicial?:
   const mensalFerramentas = ferramentasEscolhidas.reduce((soma, f) => soma + f.mensal, 0);
   const mensalSobConsulta = ajuste.valor === null;
   const mensal = (ajuste.valor ?? 0) + mensalFerramentas;
-  const textoUnico = `${modelo === SOB_MEDIDA ? "a partir de " : ""}${reais(pacote.valor)}`;
+  // A promoção vale só para os modelos prontos, não para o projeto sob medida.
+  const valorPromocao = modelo === SOB_MEDIDA ? null : valorPromocional(pacote, ajuste);
+  const valorUnico = valorPromocao ?? pacote.valor;
+  const textoUnico = `${modelo === SOB_MEDIDA ? "a partir de " : ""}${reais(valorUnico)}`;
+  const textoPromocao = `${promocao.nome}: ${promocao.desconto * 100}% de desconto (de ${reais(pacote.valor)}), com permanência mínima de ${promocao.permanenciaMeses} meses no plano`;
+  // Sugere a promoção a quem escolheu o pacote dela com menos ajustes que o mínimo.
+  const sugerirPromocao =
+    modelo !== SOB_MEDIDA && valorPromocao === null && pacote.id === promocao.pacoteId && ajuste.ajustes < promocao.ajustesMinimos && promocaoAtiva();
   const textoMensal = mensalSobConsulta ? (mensal > 0 ? `${reais(mensal)} + plano sob medida` : "sob consulta") : reais(mensal);
 
   function trocarPacote(id: string) {
@@ -64,6 +82,7 @@ export function Simulador({ modeloInicial = modelos[0].slug }: { modeloInicial?:
       "",
       `Modelo: ${nomeModelo}`,
       `Pacote: ${pacote.nome} (${textoUnico})`,
+      valorPromocao !== null && textoPromocao,
       `Plano mensal: ${ajuste.nome}${ajuste.valor ? ` (${reais(ajuste.valor)})` : ""}`,
       ferramentasEscolhidas.length > 0 && `Marketing: ${ferramentasEscolhidas.map((f) => f.nome).join(", ")}`,
       `Valor mensal estimado: ${textoMensal}`,
@@ -86,7 +105,7 @@ export function Simulador({ modeloInicial = modelos[0].slug }: { modeloInicial?:
       pacote: pacote.nome,
       plano_ajuste: ajuste.nome,
       marketing: ferramentasEscolhidas.map((f) => f.nome),
-      valor_unico: textoUnico,
+      valor_unico: valorPromocao !== null ? `${textoUnico} (${textoPromocao})` : textoUnico,
       valor_mensal: textoMensal,
       detalhes: detalhes.trim() || null,
       consentimento: true,
@@ -260,13 +279,28 @@ export function Simulador({ modeloInicial = modelos[0].slug }: { modeloInicial?:
         <div className="resumo-total">
           <div>
             <small>Investimento único</small>
-            <strong>{textoUnico}</strong>
+            <strong>
+              {valorPromocao !== null && <s className="resumo-riscado">{reais(pacote.valor)}</s>}
+              {textoUnico}
+            </strong>
           </div>
           <div>
             <small>Mensal</small>
             <strong style={{ fontSize: mensalSobConsulta ? 24 : undefined }}>{textoMensal}</strong>
           </div>
         </div>
+        {valorPromocao !== null && (
+          <p className="resumo-promo">
+            {promocao.nome}: {promocao.desconto * 100}% de desconto no site. Válido até {promocao.validaAteTexto}, com
+            permanência mínima de {promocao.permanenciaMeses} meses no plano.
+          </p>
+        )}
+        {sugerirPromocao && (
+          <p className="resumo-promo">
+            Escolha o plano de {promocao.ajustesMinimos} ajustes ou mais e o site sai por{" "}
+            {reais(Math.round(pacote.valor * (1 - promocao.desconto)))}. Promoção até {promocao.validaAteTexto}.
+          </p>
+        )}
         <button className="botao" onClick={enviar} disabled={!podeEnviar}>
           Enviar pelo WhatsApp
         </button>
