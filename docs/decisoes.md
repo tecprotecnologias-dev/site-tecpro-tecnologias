@@ -27,3 +27,8 @@ Decisões tomadas no projeto, com o motivo. A mais recente fica no fim. Ao tomar
 | 2026-10-18 | Ficha da empresa (JSON-LD) sem telefone e sem endereço | Ajudar o Google a separar a TecPro de outras "TecPro", mantendo a regra de não mostrar telefone e cidade |
 | 2026-10-18 | Foto de perfil das redes com o globo do site (o "T" não é usado nas redes) | A TecPro quer o logo igual no site e nas redes |
 | 2026-10-18 | Novos tipos de site: Confeitaria, Casa de festas, Pousadas e Hotéis (19 no total); o modelo do buffet também aparece em Casa de festas | Pedido da TecPro para atender esses segmentos |
+| 2026-10-18 | Modelo "Atlas Estudos" renomeado para "Hub de Estudos" | Mesmo nome do site real usado como demonstração |
+| 2026-10-18 | Demonstrações em subdomínios: `barbearia.` (repositório `oficio-barbearia`) e `estudos.` (repositório `Hub-de-Estudos`), na mesma conta Cloudflare | Endereços com a marca da TecPro passam mais confiança na propaganda; o Netlify do Hub ficou sem créditos |
+| 2026-10-18 | Na demonstração da barbearia, o WhatsApp é fictício e os botões de contato abrem o aviso "Gostou deste site?" com link para o modelo | Não mandar visitantes para um número que pode ser de outra pessoa |
+| 2026-10-18 | Botão flutuante do WhatsApp abre a conversa direto com a TecPro | O número não aparece escrito no site, mas o botão tem que levar ao WhatsApp |
+| 2026-10-18 | Simulador diz o que falta preencher e, se o navegador bloquear a janela nova, abre o WhatsApp na mesma aba depois de gravar o pedido | O botão "Enviar pelo WhatsApp" parecia não funcionar |

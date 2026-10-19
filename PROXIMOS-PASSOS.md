@@ -46,6 +46,7 @@ Marque com `[x]` o que for concluído. A documentação técnica está no [READM
 
 ## Já concluído
 
+- [x] Botão flutuante do WhatsApp em todas as páginas (abre a conversa direto, sem mostrar o número) e simulador mais claro sobre o que falta preencher (18/10/2026).
 - [x] Domínio `tecprotecnologias.com.br` registrado no Registro.br (renovar em outubro de 2027).
 - [x] Site publicado no Cloudflare, com atualização automática a cada envio para o GitHub.
 - [x] Domínio e `www` ligados ao site, com https obrigatório.
